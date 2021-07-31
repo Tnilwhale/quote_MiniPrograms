@@ -1,0 +1,18 @@
+<!--pages/store_operation/store_operation.wxml-->
+<view class="operation">
+  <view class="operation_1" bindtap="operation" data-page="../store_operation_up/store_operation_up">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/product_upload.png" style="width:100rpx;height:100rpx"></image>
+    <view>产品上传</view>
+  </view>
+  <view class="operation_1" bindtap="operation" data-page="../store_operation_gl/store_operation_gl">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/product_management.png" style="width:100rpx;height:100rpx"></image>
+    <view>产品管理</view>
+  </view>
+  <view class="operation_1" bindtap="operation" data-page="../store_operation_order/store_operation_order">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/order_management.png" style="width:100rpx;height:100rpx"></image>
+    <view>订单管理</view>
+  </view>
+
+</view>
+
+

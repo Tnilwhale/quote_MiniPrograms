@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+  "window": {
+    "backgroundColor": "#3396fa",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3396fa",
+    "navigationBarTitleText": "坤恒后台登录",
+    "navigationBarTextStyle": "white"
+  }
+}

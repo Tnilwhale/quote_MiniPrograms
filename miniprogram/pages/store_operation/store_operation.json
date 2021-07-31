@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+  "window": {
+    "backgroundColor": "#3396fa",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3396fa",
+    "navigationBarTitleText": "后台功能模块",
+    "navigationBarTextStyle": "white"
+  }
+}

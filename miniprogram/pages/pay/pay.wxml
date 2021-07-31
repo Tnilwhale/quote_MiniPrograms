@@ -1,0 +1,54 @@
+<!--pages/pay/pay.wxml-->
+<!-- 地址模块 -->
+<view class="address">
+  <button bindtap="address" style="width:300rpx" plain="true" type="primary">编辑地址</button>
+  <view class="address_1">
+    <view>{{name}}</view>
+    <view>{{phone_number}}</view>
+  </view>
+  <view>{{address}}</view>
+</view>
+
+
+<!-- 产品展示模块 -->
+<scroll-view class="product" scroll-y="true">
+<block wx:for="{{product}}" wx:key="_id">
+<!-- 产品信息模块 -->
+<view class="product_list">
+  <view class="product_list_1">
+    <view class="product_list_3">
+      <image src="{{item.product_src}}" style="width:100rpx;height:100rpx"></image>
+      <view class="product_list_2">
+        <view style="font-size:15px">{{item.product_name}}</view>
+        <view style="font-size:13px;color:#8a8a8a;">数量：{{item.product_num}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 产品数量功能模块 -->
+  <view class="product_list_4">
+    <view style="color:red;font-size:15px;">￥{{item.product_price}}</view>    
+  </view>
+</view>
+<view class="line"></view>
+</block>
+</scroll-view>
+
+
+
+<!-- 订单备注 -->
+<view class="remarks" >
+  <view>备注：</view>
+  <textarea placeholder="请填入备注" bindinput="remarks"></textarea>
+</view>
+
+
+<!-- 按钮 -->
+<view class="bottom_btn">
+  <!-- <button open-type="contact" size="mini"  type="primary">联系客服</button> -->
+  <!-- <view style="color:#707070 font-size:2rpx">提交报价单方便我们了解您的需求</view> -->
+  <view class="pay_price">合计：￥{{money}}</view>
+  <view class="pay" bindtap="pay">
+    <view>提交</view>
+  </view>
+</view>
+

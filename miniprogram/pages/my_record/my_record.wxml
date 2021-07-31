@@ -1,0 +1,26 @@
+<!--pages/my_record/my_record.wxml-->
+
+<!-- 选择栏 -->
+<view class="xuanze">
+  <view class="xuanze_1" bindtap="order_status_selection" data-state="实施中">实施中</view>
+  <view class="xuanze_1" bindtap="order_status_selection" data-state="已完成">已完成</view>
+</view> 
+
+
+<!-- 订单栏 -->
+<block wx:for="{{order}}" wx:key="_id">
+  <navigator url="../my_record_detail/my_record_detail?id={{item._id}}" class="order">
+    <view class="order_1">
+      <view>{{item.time}}</view>
+      <view>{{item.product_state}}</view>
+    </view> 
+    <view class="order_2">
+      <image src="{{item.product[0].product_src}}" style="width:150rpx;height:150rpx"></image>
+      <view class="order_3">
+        <view>{{item.product[0].product_name}}</view>
+        <view>产品：共{{item.product.length}}件-￥{{item.money}}</view>
+      </view>
+    </view>
+  </navigator>
+</block>
+

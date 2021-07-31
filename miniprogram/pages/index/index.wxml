@@ -1,0 +1,73 @@
+<!-- 搜索框 -->
+<view class="search">
+  <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/search.png" style="width:30rpx;height:30rpx;margin-right:20rpx"></image>
+  <input placeholder="请输入搜索产品关键词" bindtap="into_search"></input>
+</view>
+
+<!-- 搜索框 -->
+<!-- <van-search
+  value="{{ value }}"
+  shape="round"
+  background="#3396fa"
+  placeholder="请输入搜索产品关键词"
+  bindtap="into_search"
+/> -->
+
+<!-- <view class="arc"></view> -->
+
+<!-- 轮播图 -->
+<view class="banner">
+  <view class="banner_bg"></view>
+    <view class="banner_box">
+      <swiper class="banner_swiper" autoplay="true" circular="true" interval="6000" indicator-dots="true" indicator-color="rgba(0,170,250,0.1)" indicator-active-color="#00aafa">
+        <swiper-item wx:for="{{banner}}" wx:key="_id"> 
+          <image src="{{item.src}}" class="slide-img" mode="widthFix"></image>
+          <!-- style="border-radius: 10rpx;" -->
+        </swiper-item>
+      </swiper>
+    </view>
+</view> 
+
+<!-- 分类模块 -->
+<view class="category">
+  <view class="category_1" wx:for="{{category}}" wx:key="_id">
+    <navigator url="../category/category?name={{item.name}}" class="category_2">
+    <view class="img2">
+    <image src="{{item.src}}" style="width:70rpx; height:70rpx; margin-bottom:15rpx"></image>
+    </view>
+    <view class="gradient">
+    <text style="color:#fff;">{{item.name}}</text>
+    </view>
+    </navigator>
+  </view>
+</view>
+
+<!-- 产品列表 -->
+<!-- <view class="product">
+<view class="line"></view>
+  <block wx:for="{{product}}" wx:key="_id">
+  <navigator class="product_1" url="../product_detail/product_detail?id={{item._id}}">
+    <image src="{{item.src[0]}}" class="img"></image>
+    <view class="product_2">
+      <text style="font-size:12px;">{{item.name}}：￥{{item.price}}</text>
+      <text style="font-size:12px;font-weight: 200;"></text>
+    </view>
+  </navigator>
+  </block>
+</view> -->
+
+<view class="product">
+<view class="line"></view>
+  <block wx:for="{{product}}" wx:key="_id">
+  <navigator class="product_1" url="../product_detail/product_detail?id={{item._id}}">
+    <image src="{{item.src[0]}}" class="img"></image>
+    <view class="product_2">
+    <text style="font-size:26rpx; font-weight:500;">{{item.name}}</text>
+    </view>
+    <view class="product_3">
+      <text style="font-size:15px; font-weight:500; color:#ff0042">￥{{item.price}}</text>
+      <image style="width:50rpx;height:50rpx;" src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/circle_add.png"></image>
+    </view>
+  </navigator>
+  </block>
+</view>

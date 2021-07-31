@@ -1,0 +1,17 @@
+<!--pages/store_login/store_login.wxml-->
+<view class="tongyi">
+  <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/logo_center.png" style="width:600rpx;height:140rpx;margin: 200rpx 0 100rpx 0;"></image>
+  <form class="login" bindsubmit="formsubmit">
+    <view class="login_1">
+      <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/account.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+      <input name="account" placeholder="请输入账号"></input>
+    </view>
+    <view class="line"></view>
+    <view class="login_1">
+      <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/password.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+      <input name="pwd" placeholder="请输入密码" password="true"></input>
+    </view>
+    <view class="line"></view>
+    <button form-type="submit" style="background-color: #3396fa;color: #fff;margin-top: 80rpx;">登录</button>
+  </form>
+</view>

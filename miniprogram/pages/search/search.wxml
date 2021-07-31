@@ -1,0 +1,38 @@
+<!--pages/search/search.wxml-->
+<!-- <van-search
+  value="{{ value }}"
+  shape="round"
+  background="#3396fa"
+  placeholder="请输入搜索产品关键词"
+  bind:search="search"
+/> -->
+
+<!-- 搜索框 -->
+<view class="search_bg">
+  <view class="search">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/search.png" style="width:30rpx;height:30rpx;margin-right:20rpx"></image>
+    <input placeholder="请输入搜索产品关键词" bindconfirm="search" confirm-type="done"></input>
+  </view>
+</view>
+
+<scroll-view class="category_right" scroll-y="true">
+    <block wx:for="{{search}}" wx:key="_id">
+      <navigator class="category_right_1" url="../product_detail/product_detail?id={{item._id}}">
+        <view class="category_right_1_1">
+          <image src="{{item.src}}" style="width:120rpx;height:120rpx;margin-left:20rpx;"></image>
+          <view class="category_right_1_1_1">
+              <view class="category_right_title">{{item.name}}</view>
+              <view class="category_right_bottom">
+                <view>￥{{item.price}}</view>
+                <!-- <view>销量：{{item.num}}</view> -->
+                <image style="width:50rpx;height:50rpx;" src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/circle_add.png"></image>
+              </view>
+          </view>
+
+        </view>
+      </navigator>
+      <view class="line_row"></view>
+    </block>
+  </scroll-view>
+
+

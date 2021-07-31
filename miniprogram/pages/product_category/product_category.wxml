@@ -1,0 +1,36 @@
+<!--pages/product_category/product_category.wxml-->
+
+<view class="category">
+<!-- 分类栏 -->
+  <view class="category_left">
+    <block wx:for="{{category}}" wx:key="{{index}}">
+      <!-- wx:for-index="i" wx:if="{{i>0}}" -->
+      <view class="category_left_1 {{curIndex == index ? 'active' : ''}}" bindtap="get_product_category" data-index="{{index}}" data-name="{{item.name}}">
+        <!-- <image src="{{item.src}}" style="width:50rpx;height:50rpx"></image> -->
+        {{item.name}}
+      </view>
+      <view class="line_row"></view>
+    </block>
+  </view>
+  <view class="line"></view>
+  <!-- 产品栏 -->
+  <scroll-view class="category_right" scroll-y="true">
+    <block wx:for="{{product}}" wx:key="_id">
+      <navigator class="category_right_1" url="../product_detail/product_detail?id={{item._id}}">
+        <view class="category_right_1_1">
+          <image src="{{item.src[0]}}" style="width:120rpx;height:120rpx;margin-left:20rpx;"></image>
+          <view class="category_right_1_1_1">
+              <view class="category_right_title">{{item.name}}</view>
+              <view class="category_right_bottom">
+                <view>￥{{item.price}}</view>
+                <!-- <view>销量：{{item.num}}</view> -->
+                <image style="width:50rpx;height:50rpx;" src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/circle_add.png"></image>
+              </view>
+          </view>
+
+        </view>
+      </navigator>
+      <view class="line_row"></view>
+    </block>
+  </scroll-view>
+</view>

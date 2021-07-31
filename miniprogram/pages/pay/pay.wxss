@@ -1,0 +1,124 @@
+/* pages/pay/pay.wxss */
+page{
+  background-color: rgb(228, 226, 226);
+}
+.product_list{
+  display: flex;
+  flex-direction: row;
+  width: 96%;
+  /* width: 100%; */
+  height: 150rpx;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.product_list_1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30rpx;
+}
+.product_list_2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.product_list_3{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+}
+.product_list_4{
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  justify-content: space-between;
+  font-size: 20px;
+  align-items: center;
+}
+
+.line{
+  width: 100%;
+  height: 1rpx;
+  background-color: #e6e6e6;
+  margin-bottom: 10rpx;
+}
+
+
+.bottom_btn{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  color: #fff;
+}
+.pay{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  /* width: 100%; */
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  height: 80rpx;
+  background-color: rgb(255, 68, 35);
+}
+
+.pay_price{
+  display: flex;
+  flex-direction: row;
+  color: rgb(255, 68, 35);
+  width: 50%;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.product{
+  display: flex;
+  width: 96%;
+  /* width: 100%; */
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 300rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+
+.address{
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  /* width: 100%; */
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 200rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+.address_1{
+  display: flex;
+  flex-direction: row;
+}
+
+.remarks{
+  display: flex;
+  width: 96%;
+  /* width: 100%; */
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 300rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}

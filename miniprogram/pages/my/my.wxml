@@ -1,0 +1,71 @@
+<!--pages/my/my.wxml-->
+<!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+<view class="aa">
+  <view class="cc">
+    <open-data type="userAvatarUrl"></open-data>
+  </view> 
+  <!-- 用户信息 -->
+  <view>
+    <view class="ac">
+        <open-data type="userNickName" lang="zh_CN" ></open-data>
+    </view>
+    <view class="cv">
+      <open-data type="userCountry" lang="zh_CN" ></open-data>
+      <open-data type="userProvince" lang="zh_CN" ></open-data>
+      <open-data type="userCity" lang="zh_CN" ></open-data>
+    </view>
+  </view>
+</view>
+
+<!-- 坤恒官网 -->
+<navigator url="../webview/webview">
+  <view class="aq">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/website.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+    <view>坤恒官网</view>
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/right_arrow.png" style="width:60rpx;height:60rpx;margin-left: 400rpx;"></image>
+  </view>
+</navigator>
+
+<!-- 我的订单 -->
+<navigator url="../my_record/my_record">
+  <view class="aq">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/my_order.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+    <view>我的订单</view>
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/right_arrow.png" style="width:60rpx;height:60rpx;margin-left: 400rpx;"></image>
+  </view>
+</navigator>
+
+
+
+<!-- 收货地址 -->
+<view class="aq" bindtap="address">
+  <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/delivery_address.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+  <view>收货地址</view>
+  <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/right_arrow.png" style="width:60rpx;height:60rpx;margin-left: 400rpx;"></image>
+</view>
+
+<!-- 反馈建议 -->
+<!-- <view class="aq">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/feedback.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+		<button style="height:60rpx;font-size:21px;font-weight:400;"open-type="feedback">反馈建议</button>
+		<image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/right_arrow.png" style="width:60rpx;height:60rpx;margin-left: 400rpx;"></image>
+</view> -->
+
+<!-- 后台管理 -->
+<navigator url="../store_login/store_login">
+  <view class="aq">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/backstage_ management.png" style="width:60rpx;height:60rpx;margin-right: 20rpx;"></image>
+    <view>后台管理</view>
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/right_arrow.png" style="width:60rpx;height:60rpx;margin-left: 400rpx;"></image>
+  </view>
+</navigator>
+
+<!-- <button class="feedback_btn" open-type="feedback">
+ <image class="feedback_image" src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/feedback.png"></image>
+</button> -->
+
+
+<view class="authorize_btn">
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="primary" plain='true' style="margin-top: 100rpx;width:300rpx">授权登录</button>
+  <view wx:else>请升级微信版本</view>
+</view>

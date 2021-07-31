@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+  "window": {
+    "backgroundColor": "#3396fa",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3396fa",
+    "navigationBarTitleText": "搜索产品",
+    "navigationBarTextStyle": "white"
+  }
+}

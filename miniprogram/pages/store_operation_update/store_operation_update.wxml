@@ -1,0 +1,65 @@
+<!--pages/store_operation_update/store_operation_update.wxml-->
+<form bindsubmit="submit">
+  <view class="up">
+  <view class="upload1">
+    <view class="upload_1">
+      <view>产品名：</view>
+      <input placeholder="请输入产品名" name="name" value="{{name}}"></input>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="upload_1"> 
+      <view>产品价格：</view>
+      <input placeholder="请输入产品价格" name="price" value="{{price}}"></input>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="upload_1">
+      <radio-group name="category">
+        <block wx:for="{{category}}" wx:key="_id">
+          <radio style="margin-right:20rpx" value="{{item.name}}">{{item.name}}</radio>
+        </block>
+      </radio-group>
+    </view>
+  </view>
+  
+
+<view class="upload2">
+  <!-- <view>产品简介：</view> -->
+  <textarea placeholder="请输入产品简介（50字）" maxlength="50" name="detail" value="{{detail}}"></textarea>
+</view>
+
+
+<scroll-view class="img" scroll-y="true">
+  <block wx:for="{{img}}">
+    <image src="{{item}}" style="width:100rpx;height:100rpx"></image>
+    <button style="border:0rpx;background-color:rgb(255, 68, 35);" size="mini" type="warn" bindtap="delete" data-id="{{index}}" data-src="{{item}}">×</button>
+  </block>
+<view class="submit_btn">
+  <button style="background-color: #3396fa;color: #fff;" size="mini" type="default" bindtap="upload_img" >上传产品详情轮播图</button>
+</view>
+</scroll-view>
+
+<scroll-view class="img2" scroll-y="true">
+  <block wx:for="{{img2}}">
+    <image src="{{item}}" style="width:100rpx;height:100rpx"></image>
+    <button style="border:0rpx;background-color:rgb(255, 68, 35);" size="mini" type="warn" bindtap="delete2" data-id="{{index}}" data-src="{{item}}">×</button>
+  </block>
+<view class="submit_btn2">
+  <button style="background-color: #3396fa;color: #fff;" size="mini" type="primary" bindtap="upload_img2" >上传案例图</button>
+</view>
+</scroll-view>
+
+</view>
+
+<button style="width:96%;margin-top:40rpx;background-color:#3396fa; border-radius:10rpx;" form-type="submit" type="primary">确认修改</button>
+<button style="width:96%;margin-top:40rpx; border-radius:10rpx;" bindtap="delete_product" type="warn" >删除</button>
+
+</form>
+<!-- class="add_btn1" <image class="add_btn1_img" src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/circle_del.png"></image> -->
+
+
+
+
