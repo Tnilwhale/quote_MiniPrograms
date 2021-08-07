@@ -26,19 +26,23 @@
         </swiper-item>
       </swiper>
     </view>
-</view> 
+</view>
+
+<view class="module">
+<view class="module_title"><text>解决方案</text></view>
+</view>
 
 <!-- 分类模块 -->
 <view class="category">
-  <view class="category_1" wx:for="{{category}}" wx:key="_id">
-    <navigator url="../category/category?name={{item.name}}" class="category_2">
+  <view class="category_1" wx:for="{{category}}" wx:key="_id" data-item="{{item}}" bindtap="update_open_file">
+    <!-- <navigator url="../category/category?name={{item.name}}" class="category_2"> -->
     <view class="img2">
     <image src="{{item.src}}" style="width:70rpx; height:70rpx; margin-bottom:15rpx"></image>
     </view>
     <view class="gradient">
-    <text style="color:#fff;">{{item.name}}</text>
+    <text style="color:#fff;font-size:30rpx;">{{item.name}}</text>
     </view>
-    </navigator>
+    <!-- </navigator> -->
   </view>
 </view>
 
@@ -56,8 +60,12 @@
   </block>
 </view> -->
 
+<view class="module">
+<view class="module_title"><text>项目展示</text></view>
+</view>
+
 <view class="product">
-<view class="line"></view>
+<!-- <view class="line"></view> -->
   <block wx:for="{{product}}" wx:key="_id">
   <navigator class="product_1" url="../product_detail/product_detail?id={{item._id}}">
     <image src="{{item.src[0]}}" class="img"></image>

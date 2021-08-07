@@ -1,0 +1,32 @@
+<!--pages/store_operation_category/store_operation_category.wxml-->
+<view class="top">
+  <view style="margin-right:30rpx;">新增分类</view>
+  <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/circle_add.png" bindtap="to_add" style="width:50rpx;height:50rpx;margin-right:30rpx;"></image>
+</view>
+
+<block wx:for="{{category}}" wx:key="_id">
+<navigator url="../store_operation_category_update/store_operation_category_update?id={{item._id}}">
+<view class="product_list">
+  <view class="product_list_1">
+    <!-- 选择框 负责传递商品id -->
+    <view class="product_list_3">
+      <view style="font-size:15px">{{item.name}}</view>
+      <!-- <view class="product_list_2">
+        <view style="font-size:15px">{{item.name}}</view>
+        <view style="color:red">￥{{item.price}}</view>
+      </view> -->
+    </view>
+  </view>
+
+  <!-- 商品数量功能模块 -->
+  <view class="product_list_4">
+    <image style="width:40rpx;height:40rpx;" src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/edit.png"></image>
+  </view>
+</view>
+<view class="line"></view>
+
+</navigator>
+<!-- 商品信息模块 -->
+
+</block>
+

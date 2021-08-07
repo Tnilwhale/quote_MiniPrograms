@@ -1,3 +1,4 @@
+// pages/shopping_cart1/shopping_cart1.js
 // pages/shopping_cart/shopping_cart.js
 const db = wx.cloud.database()
 const _ = db.command
@@ -75,7 +76,8 @@ Page({
         })
       }
     },
-//quanxuan
+
+    // 全选与全不选事件
     checkedAll:function(e){
       let that = this
       console.log(e)
@@ -95,10 +97,6 @@ Page({
             that.onLoad()
           }
         })
-
-        that.setData({
-          product_checked:that.data.product_checked
-        })        
       }
       
     },
@@ -106,40 +104,16 @@ Page({
   // 商品删除
   delete:function(){
     let that = this
-    wx.showModal({
-      title: '温馨提示',
-      content: '确认删除选中的产品么？',
-      success (res) {
-        if (res.confirm) {
-          wx.cloud.callFunction({
-            name:"product_delete",
-            success:function(res){
-              console.log('删除产品成功',res)
-              that.onLoad()
-            },fail:function(res){
-              console.log('删除产品失败',res)
-            }
-          })
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
+    wx.cloud.callFunction({
+      name:"product_delete",
+      success:function(res){
+        console.log('删除商品成功',res)
+        that.onLoad()
+      },fail:function(res){
+        console.log('删除商品失败',res)
       }
     })
-
-    // wx.cloud.callFunction({
-    //   name:"product_delete",
-      // success:function(res){
-      //   console.log('删除商品成功',res)
-      //   that.onLoad()
-      // },fail:function(res){
-      //   console.log('删除商品失败',res)
-    //   }
-    // })
-
   },
-
-
 
   // 商品数量加事件
   product_plus:function(e){

@@ -1,27 +1,43 @@
 <!-- pages/category/category.wxml
-<!--主盒子-->
-<view class="container">
-  <!--左侧栏-->
-  <view class="nav_left">
-    <block wx:for="{{cateItems}}">
-      <!--当前项的id等于item项的id，那个就是当前状态-->
-      <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
-      <view class="nav_left_items {{curNav == item.cate_id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}">{{item.cate_name}}</view>
-    </block>
-  </view>
-  <!--右侧栏-->
-  <view class="nav_right">
-    <!--如果有数据，才遍历项-->
-    <view wx:if="{{cateItems[curIndex].ishaveChild}}">
-      <block wx:for="{{cateItems[curIndex].children}}">
-        <view class="nav_right_items">
-        <!--界面跳转 -->
-            <image src="{{item.image}}"></image>
-            <text>{{item.name}}</text>
+<!--pages/shopping_cart1/shopping_cart1.wxml-->
+<view class="main">
+    <view wx:if="{{hasList}}"> 
+<!--hasList判断是否存在购物列表-->
+        <view class="cart-box">
+            <view class="cart-list" wx:for="{{carts}}" wx:key="{{index}}">
+                <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"/>
+                <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList"/>
+<!--item.selected判断是否选中-->
+<!--../details/details?id={{item.id}}  跳转具体商品页-->
+                <navigator url="../details/details?id={{item.id}}"><image class="cart-thumb" src="{{item.image}}"></image></navigator>
+                <text class="cart-pro-name">{{item.title}}</text>
+                <text class="cart-pro-price">￥{{item.price}}</text>
+                <view class="cart-count-box">
+<!--data-obj 自定义属性-->
+                    <text class="cart-count-down" bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}">-</text>
+                    <text class="cart-count-num">{{item.num}}</text>
+                    <text class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</text>
+                </view>
+                <text class="cart-del" bindtap="deleteList" data-index="{{index}}">×</text>
+            </view>
         </view>
-      </block>
+ 
+        <view class="cart-footer">
+<!--全选功能-->
+            <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#fff" class="total-select" bindtap="selectAll"/>
+            <icon wx:else type="circle" color="#fff" class="total-select" bindtap="selectAll"/>
+<!--全选功能-->
+<!--调转支付页面-->
+            <view class="order-icon">
+                <navigator url="../orders/orders"><image src="/image/icon3.png"></image></navigator>
+            </view>
+<!--调转支付页面-->
+            <text>全选</text>
+            <text class="cart-toatl-price">￥{{totalPrice}}</text>
+        </view>
     </view>
-    <!--如果无数据，则显示数据-->
-    <view class="nodata_text" wx:else>该分类暂无数据</view>
-  </view>
-</view> -->
+ 
+    <view wx:else>
+        <view class="cart-no-data">购物车是空的哦~</view>
+    </view>
+</view>

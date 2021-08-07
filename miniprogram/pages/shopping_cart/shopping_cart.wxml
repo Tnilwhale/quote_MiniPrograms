@@ -1,40 +1,54 @@
 <!--pages/shopping_cart/shopping_cart.wxml-->
-
+<view class="top">
+  <view style="margin-right:30rpx;">可选中批量删除</view>
+  <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/cart_del.png" bindtap="delete" style="width:50rpx;height:50rpx;margin-right:30rpx;"></image>
+</view>
 <block wx:for="{{product}}" wx:key="_id">
 <!-- 商品信息模块 -->
 <view class="product_list">
   <view class="product_list_1">
     <!-- 选择框 负责传递商品id -->
     <checkbox-group bindchange="choose" data-id="{{item._id}}">
-      <checkbox value="{{item._id}}" checked="{{item.product_checked}}"></checkbox>
+      <checkbox value="{{item._id}}" checked="{{item.product_checked}}" color="#3396fa"></checkbox>
     </checkbox-group>
     <view class="product_list_3">
       <image src="{{item.product_src}}" style="width:100rpx;height:100rpx"></image>
       <view class="product_list_2">
-        <view style="font-size:15px">{{item.product_name}}</view>
-        <view style="color:red">￥{{item.product_price}}</view>
+        <view style="font-size:15px;">{{item.product_name}}</view>
+        <view style="color:red;font-size:13px;margin-top:15rpx;">￥{{item.product_price}}</view>
       </view>
     </view>
   </view>
 
 <!-- 商品数量功能模块 -->
-  <view class="product_list_4">
+  <!-- <view class="product_list_4">
     <image data-id="{{item._id}}" bindtap="product_subtract" src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/subtract.png" style="width:30rpx;height:30rpx" data-product_num="{{item.product_num}}"></image>
     <view style="font-size:15px">{{item.product_num}}</view>
     <image data-id="{{item._id}}" bindtap="product_plus" src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/plus.png" style="width:30rpx;height:30rpx"></image>
-  </view>
+  </view> -->
+  <van-stepper style="margin-right:20rpx;"value="{{item.product_num}}" bind:minus="product_subtract" bind:plus="product_plus" data-id="{{item._id}}" disable-input="false" />
 </view>
-<view class="line"></view>
+<!-- <view class="line"></view> -->
 </block>
 
 
-
 <!-- 按钮模块 -->
-<view class="order_button">
+<!-- <view class="order_button">
   <button class="del_btn" bindtap="delete">选中删除</button>
-  <!-- <button open-type="contact" size="mini"  type="primary">联系客服</button> -->
+  <button open-type="contact" size="mini"  type="primary">联系客服</button>
   <view class="pay" bindtap="pay">
     <view>结算</view>
     <view>（{{money}}）</view>
   </view>
-</view>
+</view> -->
+
+<van-submit-bar
+  price="{{money*100}}"
+  decimal-length="0"
+  button-text="提交订单"
+  bind:submit="pay"
+  tip-icon="warning-o"
+  tip="提交报价单仅提交数据，不涉及支付"
+>
+  <!-- <van-checkbox bind:change="checkedAll">全选</van-checkbox> -->
+</van-submit-bar>

@@ -41,6 +41,18 @@
           "pathName": "pages/search/search",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/store_operation_indexbanner_list/store_operation_indexbanner_list",
+          "pathName": "pages/store_operation_indexbanner_list/store_operation_indexbanner_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/store_operation_category_add/store_operation_category_add",
+          "pathName": "pages/store_operation_category_add/store_operation_category_add",
+          "query": "",
+          "scene": null
         }
       ]
     }

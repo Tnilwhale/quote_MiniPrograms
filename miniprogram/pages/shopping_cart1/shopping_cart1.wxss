@@ -1,4 +1,4 @@
-/* pages/shopping_cart/shopping_cart.wxss */
+/* pages/shopping_cart1/shopping_cart1.wxss */
 
 .top{
   display: flex;
@@ -22,7 +22,7 @@
   align-self: center;
   align-items: center;
   justify-content: space-between;
-  margin-top: 25rpx;
+  margin-top: 30rpx;
   background-color: #fff;
 }
 .product_list_1{
@@ -89,10 +89,4 @@
   height: 84rpx;
   background-color: rgb(255, 68, 35);
   color: #fff;
-}
-
-
-
-.van-button--danger{
-  background-color: linear-gradient(to right, #2fa836, #0c8438);
 }

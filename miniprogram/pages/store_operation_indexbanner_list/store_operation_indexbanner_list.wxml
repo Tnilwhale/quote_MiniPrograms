@@ -1,0 +1,30 @@
+<!--pages/store_operation_indexbanner_list/store_operation_indexbanner_list.wxml-->
+
+<view class="top">
+  <view style="margin-right:30rpx;">新增轮播图（1920*800）</view>
+  <navigator url="../store_operation_indexbanner_upload/store_operation_indexbanner_upload">
+  <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/circle_add.png" bindtap="add" style="width:50rpx;height:50rpx;margin-right:30rpx;"></image>
+  </navigator>
+</view>
+
+<block wx:for="{{swiper}}" wx:key="_id">
+<navigator url="../store_operation_indexbanner_update/store_operation_indexbanner_update?id={{item._id}}">
+<view class="product_list">
+  <view class="product_list_1">
+    <!-- 选择框 负责传递商品id -->
+    <view class="product_list_3">
+      <image src="{{item.src}}" style="width:268.8rpx;height:112rpx"></image>
+    </view>
+  </view>
+
+  <!-- 商品数量功能模块 -->
+  <view class="product_list_4">
+    <image style="width:40rpx;height:40rpx;" src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/edit.png"></image>
+  </view>
+</view>
+<view class="line"></view>
+
+</navigator>
+<!-- 商品信息模块 -->
+
+</block>

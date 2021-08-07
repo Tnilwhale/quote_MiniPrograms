@@ -87,6 +87,7 @@
 }
 
 .call{
+  width:96%;
   margin-top:20rpx;
   margin-bottom:20rpx;
   color: #3396fa;

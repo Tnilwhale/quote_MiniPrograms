@@ -92,6 +92,31 @@ swiper .wx-swiper-dots .wx-swiper-dot{
   border-radius: 4rpx;
 }
 
+.module{
+  width: 94%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: #fff; */
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin:20rpx,0;
+  border-radius: 10rpx;
+}
+
+.module_title{
+  height: 70rpx;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4rpx solid #3396fa;
+  font-size: 34rpx;
+  font-weight: 500;
+  color: #707070;
+}
 
 /* 分类模块 */
 
@@ -102,10 +127,11 @@ swiper .wx-swiper-dots .wx-swiper-dot{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: snow;
+  /* background-color: snow; */
   justify-content: space-between;
   /* padding: 0 0 0 15rpx; */
   padding: 0 25rpx 0 25rpx;
+  margin:10rpx 0;
 }
 .category_1{
   /* width: 20%; */
@@ -117,7 +143,7 @@ swiper .wx-swiper-dots .wx-swiper-dot{
   justify-content: center;
   border-radius: 10rpx;
   /* border: 3rpx solid #e6e6e6; */
-  padding:10rpx 5rpx 10rpx 5rpx;
+  padding:10rpx 5rpx 5rpx 5rpx;
   box-shadow:0px 2px 5px 5px #DDDDDD;
 }
 
@@ -136,12 +162,19 @@ swiper .wx-swiper-dots .wx-swiper-dot{
   justify-content: center;
 }
 .gradient{
-  width: 100%;
+  width: 90%;
   height: 50rpx;
-  display: inline-block;
-  border-radius: 10rpx;
+  display: flex;
+  /* border-radius: 10rpx; */
+  border-top-right-radius:3rpx;
+  border-top-left-radius:3rpx;
+  border-bottom-right-radius:10rpx;
+  border-bottom-left-radius:10rpx;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
   padding:5rpx 10rpx 0 10rpx;
-  background: -webkit-linear-gradient(left,#3396fa, #25CCF7,white);
+  background: -webkit-linear-gradient(left,#3396fa, #25CCF7);
 }
 
 .line{
@@ -198,7 +231,8 @@ swiper .wx-swiper-dots .wx-swiper-dot{
   flex-wrap: wrap;
   align-self: center;
   align-items: center; 
-  background-color: snow;
+  /* background-color: snow; */
+  margin-top: 20rpx;
 }
 .product_1{
   width: 46%;
@@ -211,9 +245,10 @@ swiper .wx-swiper-dots .wx-swiper-dot{
   margin:10rpx 15rpx 10rpx 15rpx;
 }
 .img{
-  width: 350rpx;
+  width: 100%;
   height: 350rpx;
-  border-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  border-top-left-radius: 20rpx;
 }
 
 .product_2{

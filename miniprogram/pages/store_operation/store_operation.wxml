@@ -1,5 +1,18 @@
 <!--pages/store_operation/store_operation.wxml-->
 <view class="operation">
+  <view class="operation_1" bindtap="operation" data-page="../index/index">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/back_index.png" style="width:100rpx;height:100rpx"></image>
+    <view>前台展示</view>
+  </view>
+  <view class="operation_1" bindtap="operation" data-page="../store_operation_indexbanner_list/store_operation_indexbanner_list">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/swiper_management.png" style="width:100rpx;height:100rpx"></image>
+    <view>轮播管理</view>
+  </view>
+  <view class="operation_1" bindtap="operation" data-page="../store_operation_category/store_operation_category">
+    <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/category_management.png" style="width:100rpx;height:100rpx"></image>
+    <view>分类管理</view>
+  </view>
+
   <view class="operation_1" bindtap="operation" data-page="../store_operation_up/store_operation_up">
     <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/product_upload.png" style="width:100rpx;height:100rpx"></image>
     <view>产品上传</view>
@@ -12,7 +25,6 @@
     <image src="cloud://cloud1-0g2ishqqbbb43d81.636c-cloud1-0g2ishqqbbb43d81-1306453376/image/icon/order_management.png" style="width:100rpx;height:100rpx"></image>
     <view>订单管理</view>
   </view>
-
 </view>
 
 

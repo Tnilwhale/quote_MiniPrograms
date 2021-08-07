@@ -28,9 +28,11 @@
 }
 .operation_1{
  flex: 0 0 auto;
-  width: 33.33333333%;
+  width: 33%;
   text-align: center;
   color: #797979;
   padding: 40rpx 0;
   font-size: 30rpx;
+  border-right: 1rpx solid #e6e6e6;/* 设置右边框 */
+  border-bottom: 1rpx solid #e6e6e6;/* 设置下边框 */
 }

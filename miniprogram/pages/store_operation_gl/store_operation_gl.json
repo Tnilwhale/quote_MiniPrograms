@@ -1,10 +1,9 @@
 {
   "usingComponents": {},
-  "window": {
     "backgroundColor": "#3396fa",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3396fa",
     "navigationBarTitleText": "产品管理",
     "navigationBarTextStyle": "white"
-  }
+
 }

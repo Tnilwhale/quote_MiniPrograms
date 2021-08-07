@@ -1,4 +1,5 @@
-/* pages/store_operation_update/store_operation_update.wxss */
+/* pages/store_operation_indexbanner_update/store_operation_indexbanner_update.wxss */
+
 page{
   background-color: rgb(219, 218, 218);
 }
@@ -24,7 +25,7 @@ page{
   justify-content: center;
   flex-direction: column;
   background-color: #fff;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   margin-top: 20rpx;
 }
 .upload2{
@@ -55,7 +56,7 @@ page{
   align-self: center;
   align-items: center;
   justify-content: center;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   margin-top: 10rpx;
 }
 
@@ -87,15 +88,4 @@ page{
   align-self: center;
   justify-content: center;
   align-items: center;
-}
-
-.del_btn1 {
-  background-color:transparent;
-}
-.del_btn1::after {
-  border: none; 
-}
-.del_btn1_img {
-  width: 30rpx;
-  height: 30rpx;
 }

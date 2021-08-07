@@ -41,6 +41,12 @@
 <van-goods-action>
   <van-goods-action-icon open-type="contact" icon="smile-o" text="客服" />
   <van-goods-action-icon bind:click="to_shopping_cart"icon="shopping-cart-o" text="报价单"/>
-  <van-goods-action-button bind:click="into_shopping_cart" color="#25CCF7" text="加入报价单" type="warning" />
-  <van-goods-action-button bind:click="buy" color="#1B9CFC" text="立即下单" />
+  <!-- <van-goods-action-button bind:click="into_shopping_cart" color="#25CCF7" text="加入报价单" type="warning" />
+  <van-goods-action-button bind:click="buy" color="#1B9CFC" text="立即下单" /> -->
+  <van-goods-action-button bind:click="into_shopping_cart" color="linear-gradient(to right, #96deda, #50c9c3)" text="加入报价单" type="warning" />
+  <van-goods-action-button bind:click="buy" color="linear-gradient(to right, #00c6fb, #1B9CFC)" text="立即下单" />
 </van-goods-action>
+<!-- linear-gradient(to right, #2fa836, #0c8438); -->
+<!-- #96deda → #50c9c3 -->
+<!-- #00c6fb → #005bea -->
+

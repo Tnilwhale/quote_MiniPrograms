@@ -1,0 +1,19 @@
+<!--pages/store_operation_indexbanner_upload/store_operation_indexbanner_upload.wxml-->
+<form bindsubmit="submit">
+<view class="up">
+
+<scroll-view class="img" scroll-y="true">
+  <block wx:for="{{img}}">
+    <image src="{{item}}" mode="widthFix"style="width:100%;height:300rpx;border-radius:20rpx;"></image>
+    <button style="border:0rpx;background-color:rgb(255, 68, 35);" size="mini" type="warn" bindtap="delete" data-id="{{index}}" data-src="{{item}}">删除重新上传</button>
+  </block>
+<view class="submit_btn">
+  <button style="background-color: #3396fa;color: #fff;" size="mini" type="default" bindtap="upload_img" >上传首页轮播图并预览</button>
+</view>
+</scroll-view>
+
+</view>
+
+<button style="width:96%;margin-top:40rpx;background-color:rgb(255, 68, 35);color: #fff; border-radius:10rpx;" form-type="submit">确认上传至云数据库</button>
+
+</form>
